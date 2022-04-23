@@ -1,0 +1,35 @@
+header {
+  background: transparent;
+  z-index: 99;
+
+  .navbar-nav {
+    .nav-item {
+      padding: 0 20px;
+    }
+
+    .nav-link {
+      @include styleText($color-dark-1, $fs-1, $fw-2);
+
+      &:hover {
+        color: $color-purple !important;
+      }
+    }
+  }
+
+  .topbarmenu {
+    .bar__icon a {
+      @include styleIcon($color-purple, $color-dark-1);
+    }
+
+    .button {
+      @include styleButton(
+        176px,
+        36px,
+        $color-white-1,
+        $color-purple,
+        $color-purple,
+        $color-white-1
+      );
+    }
+  }
+}

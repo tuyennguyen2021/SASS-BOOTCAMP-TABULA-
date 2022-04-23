@@ -1,0 +1,6 @@
+#footer {
+  @include bgImage("../../img/footer_background.jpg", center bottom);
+  .bar__icon a {
+    @include styleIcon($color-dark-1, $color-white-1);
+  }
+}
