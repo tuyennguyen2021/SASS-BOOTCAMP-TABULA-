@@ -35,12 +35,6 @@ a {
   opacity: 0;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-}
-
 header .navbar-nav .nav-item {
   padding: 0 20px;
 }
@@ -113,6 +107,42 @@ header .topbarmenu .button span {
           transform: translateY(-50%) translateX(-50%);
   z-index: 99;
   font-size: 14px;
+}
+
+.header-default {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-onscroll {
+  background-color: white;
+  -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding-top: 1rem;
+  z-index: 99;
+}
+
+.header-onscroll img {
+  display: none;
+}
+
+.header-default .nav-item {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header-onscroll .nav-item {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #carousel {

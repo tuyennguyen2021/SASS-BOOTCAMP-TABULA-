@@ -1,8 +1,13 @@
-$(window).on("scroll", function () {
-  if ($(window).scrollTop() < 2 00) {
-    $("header").addClass("removeHead");
+const header = document.querySelector("#header");
+
+function scrollheader(event) {
+  if (window.scrollY > 0) {
+    header.classList.add("header-onscroll");
+    header.classList.remove("header-default");
   } else {
-    $("header").removeClass("removeHead");
-    $("header").addClass("white");
+    header.classList.add("header-default");
+    header.classList.remove("header-onscroll");
   }
-});
+}
+
+window.addEventListener("scroll", scrollheader);
