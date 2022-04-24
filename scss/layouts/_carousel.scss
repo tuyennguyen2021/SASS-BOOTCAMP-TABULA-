@@ -1,9 +1,12 @@
 #carousel {
-  // background-image: url("../../img/Violet_top_left_wave.png");
-  // background-position: bottom left;
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  @include bgImage("../../img/Violet_top_left_wave.png", left bottom);
+  background-image: url(../../img/yellow_top_wave_01.png),
+    url("../../img/Violet_top_left_wave.png");
+  background-position: left top, bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  // @include bgImage("../../img/Violet_top_left_wave.png", left bottom);
+
   padding-top: 200px;
 
   .car__content {

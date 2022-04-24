@@ -20,8 +20,24 @@ a {
   text-decoration: none;
 }
 
+.white {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 15px gray;
+          box-shadow: 0px 8px 15px gray;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  height: auto;
+}
+
+.removeHead {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
 header {
-  background: transparent;
+  position: fixed;
+  width: 100%;
   z-index: 99;
 }
 
@@ -100,8 +116,8 @@ header .topbarmenu .button span {
 }
 
 #carousel {
-  background-image: url("../../img/Violet_top_left_wave.png");
-  background-position: left bottom;
+  background-image: url(../../img/yellow_top_wave_01.png), url("../../img/Violet_top_left_wave.png");
+  background-position: left top, bottom left;
   background-repeat: no-repeat;
   background-size: contain;
   padding-top: 200px;
@@ -181,17 +197,219 @@ header .topbarmenu .button span {
 }
 
 #course {
+  padding: 60px 0;
   background-image: url("../../img/accent_bottom_wave_01.png");
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
+#course .course__inner {
+  width: 1000px;
+  max-width: calc(100% - 60px);
+}
+
+#course .course__form {
+  padding: 30px 25px;
+}
+
+#course .course__form .form-group {
+  padding: 0 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 15px gray;
+          box-shadow: 0px 8px 15px gray;
+}
+
+#course .course__form .form-group .text__form {
+  color: #181818 !important;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+#course .course__form .form-group .box1,
+#course .course__form .form-group .box2 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 195px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+#course .course__form .form-group .box1 > i,
+#course .course__form .form-group .box2 > i {
+  font-size: 14px;
+  color: #b61984;
+  padding-right: 10px;
+}
+
+#course .course__form .form-group .box1 > input,
+#course .course__form .form-group .box2 > input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 40px;
+  border: none;
+  outline: none;
+}
+
+#course .course__form .form-group .box1 > input::-webkit-input-placeholder,
+#course .course__form .form-group .box2 > input::-webkit-input-placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+#course .course__form .form-group .box1 > input:-ms-input-placeholder,
+#course .course__form .form-group .box2 > input:-ms-input-placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+#course .course__form .form-group .box1 > input::-ms-input-placeholder,
+#course .course__form .form-group .box2 > input::-ms-input-placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+#course .course__form .form-group .box1 > input::placeholder,
+#course .course__form .form-group .box2 > input::placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+#course .course__form .form-group .box3 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+#course .course__form .form-group .box3 > .language {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 40px;
+  border: none;
+  outline: none;
+}
+
+#course .course__form .form-group .box3 > i {
+  font-size: 14px;
+  color: #b61984;
+  padding-right: 10px;
+}
+
+#course .course__form .form-group .box4 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+#course .course__form .form-group .box4 > i {
+  font-size: 14px;
+  color: #b61984;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+#course .course__form .form-group .box4 > .message {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 40px;
+  border: none;
+  outline: none;
+}
+
+#course .course__form .form-group .box4 > .message::-webkit-input-placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+#course .course__form .form-group .box4 > .message:-ms-input-placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+#course .course__form .form-group .box4 > .message::-ms-input-placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+#course .course__form .form-group .box4 > .message::placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
+#course .course__form .form-group .button {
+  position: relative;
+  width: 150px;
+  height: 48px;
+  color: #fff;
+  border-radius: 50px;
+  background-color: #b61984;
+  text-align: center;
+  overflow: hidden;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#course .course__form .form-group .button:hover .btn__hover {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1.5px solid #b61984;
+}
+
+#course .course__form .form-group .button:hover span {
+  color: #b61984;
+}
+
+#course .course__form .form-group .button .btn__hover {
+  width: 75px;
+  height: 0px;
+  position: absolute;
+  border-radius: 50px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 66;
+}
+
+#course .course__form .form-group .button span {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  z-index: 99;
+  font-size: 14px;
+}
+
 #footer {
   background-image: url("../../img/footer_background.jpg");
-  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  padding: 120px 0;
+  color: #fff !important;
 }
 
 #footer .bar__icon a {
@@ -203,5 +421,113 @@ header .topbarmenu .button span {
 
 #footer .bar__icon a:hover {
   color: #181818 !important;
+}
+
+#footer .widget-services h5 {
+  color: #fff !important;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+#footer .widget-content li {
+  color: #fff !important;
+  font-size: 14px;
+  padding-bottom: 12px;
+  padding-top: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#footer .widget-content li a {
+  color: #fff !important;
+  font-size: 14px;
+}
+
+#footer .widget-add li {
+  color: #fff !important;
+  font-size: 14px;
+  padding-bottom: 12px;
+}
+
+#footer .widget-content-btn .button {
+  position: relative;
+  width: 240px;
+  height: 48px;
+  color: #181818;
+  border-radius: 50px;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#footer .widget-content-btn .button:hover .btn__hover {
+  width: 100%;
+  height: 100%;
+  background-color: #b61984;
+  border: 1.5px solid #fff;
+}
+
+#footer .widget-content-btn .button:hover span {
+  color: #fff;
+}
+
+#footer .widget-content-btn .button .btn__hover {
+  width: 120px;
+  height: 0px;
+  position: absolute;
+  border-radius: 50px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 66;
+}
+
+#footer .widget-content-btn .button span {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  z-index: 99;
+  font-size: 14px;
+}
+
+#footer .widget-content-btn .email input {
+  color: #fff;
+  width: 240px;
+  height: 48px;
+  border: 1px solid white;
+  background: #b61984;
+  border-radius: 50px;
+}
+
+#footer .widget-content-btn .email input::-webkit-input-placeholder {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+#footer .widget-content-btn .email input:-ms-input-placeholder {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+#footer .widget-content-btn .email input::-ms-input-placeholder {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+#footer .widget-content-btn .email input::placeholder {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
