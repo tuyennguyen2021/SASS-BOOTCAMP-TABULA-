@@ -29,6 +29,16 @@ header {
       );
     }
   }
+  .navbar-toggler-icon {
+    background-color: $color-purple;
+  }
+  .navbar-collapse.collapse {
+    @include mediaQuery($sm) {
+      background-color: $color-white-1;
+      z-index: 99;
+      width: 100%;
+    }
+  }
 }
 
 .header-default {

@@ -109,6 +109,18 @@ header .topbarmenu .button span {
   font-size: 14px;
 }
 
+header .navbar-toggler-icon {
+  background-color: #b61984;
+}
+
+@media screen and (max-width: 768px) {
+  header .navbar-collapse.collapse {
+    background-color: #fff;
+    z-index: 99;
+    width: 100%;
+  }
+}
+
 .header-default {
   background-color: transparent;
   position: absolute;
@@ -434,12 +446,35 @@ header .topbarmenu .button span {
   font-size: 14px;
 }
 
+@media screen and (max-width: 768px) {
+  #course .course__form .form-group .button {
+    width: 100%;
+  }
+}
+
 #footer {
   background-image: url("../../img/footer_background.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   padding: 120px 0;
   color: #fff !important;
+}
+
+@media screen and (max-width: 1200px) {
+  #footer {
+    background-image: url("../../img/footer_background.jpg");
+    background-position: top right;
+    background-size: cover;
+    padding: 120px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer {
+    background-image: url("../../img/footer_background.jpg");
+    background-position: bottom right;
+    background-size: cover;
+    padding: 120px 0;
+  }
 }
 
 #footer .bar__icon a {

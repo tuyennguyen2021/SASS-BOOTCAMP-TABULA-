@@ -96,6 +96,9 @@
           $color-purple,
           $color-white-1
         );
+        @include mediaQuery($sm) {
+          width: 100%;
+        }
       }
     }
   }

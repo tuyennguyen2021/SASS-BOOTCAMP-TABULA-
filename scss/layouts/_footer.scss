@@ -1,9 +1,20 @@
 #footer {
   background-image: url("../../img/footer_background.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   padding: 120px 0;
   color: $color-white-1 !important;
+  @include mediaQuery($lg) {
+    background-image: url("../../img/footer_background.jpg");
+    background-position: top right;
+    background-size: cover;
+    padding: 120px 0;
+  }
+  @include mediaQuery($sm) {
+    background-image: url("../../img/footer_background.jpg");
+    background-position: bottom right;
+    background-size: cover;
+    padding: 120px 0;
+  }
   .bar__icon a {
     @include styleIcon($color-dark-1, $color-white-1);
   }
