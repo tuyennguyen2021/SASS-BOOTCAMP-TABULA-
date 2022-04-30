@@ -29,9 +29,6 @@ header {
       );
     }
   }
-  .navbar-toggler-icon {
-    background-color: $color-purple;
-  }
   .navbar-collapse.collapse {
     @include mediaQuery($sm) {
       background-color: $color-white-1;
@@ -42,11 +39,19 @@ header {
 }
 
 .header-default {
-  background-color: transparent;
+  background-color: transparent !important;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9999;
+  @include mediaQuery($md) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
 }
 
 .header-onscroll {

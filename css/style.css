@@ -109,10 +109,6 @@ header .topbarmenu .button span {
   font-size: 14px;
 }
 
-header .navbar-toggler-icon {
-  background-color: #b61984;
-}
-
 @media screen and (max-width: 768px) {
   header .navbar-collapse.collapse {
     background-color: #fff;
@@ -122,11 +118,22 @@ header .navbar-toggler-icon {
 }
 
 .header-default {
-  background-color: transparent;
+  background-color: transparent !important;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 992px) {
+  .header-default {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
 }
 
 .header-onscroll {
